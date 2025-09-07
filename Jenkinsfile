@@ -18,12 +18,14 @@ pipeline{
                 success{
                   mail to: "tobiasjduffy@gmail.com",
                   subject: "Test Status Email",
-                  body: "Test was successful!"
+                  body: "Test was successful!",
+                  attachLog: true
             }
                 failure{
                   mail to: "tobiasjduffy@gmail.com",
                   subject: "Test Status Email",
-                  body: "Test failed."
+                  body: "Test failed.",
+                  attachLog: true
                 }
             }
         }
@@ -42,12 +44,14 @@ pipeline{
                 success{
                   mail to: "tobiasjduffy@gmail.com",
                   subject: "Security Scan Status Email",
-                  body: "Scan was successful!"
+                  body: "Scan was successful!",
+                  attachLog: true
             }
                 failure{
                   mail to: "tobiasjduffy@gmail.com",
                   subject: "Security Scan Status Email",
-                  body: "Scan failed."
+                  body: "Scan failed.",
+                  attachLog: true
                 }
             }
         }
