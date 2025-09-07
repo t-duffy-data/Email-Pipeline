@@ -18,14 +18,12 @@ pipeline{
                 success{
                   mail to: "tobiasjduffy@gmail.com",
                   subject: "Test Status Email",
-                  body: "Test was successful!",
-                  attachLog: true
+                  body: "Test was successful! ${BUILD_LOG, maxLines=9999, escapeHtml=false}"
             }
                 failure{
                   mail to: "tobiasjduffy@gmail.com",
                   subject: "Test Status Email",
-                  body: "Test failed.",
-                  attachLog: true
+                  body: "Test failed. ${BUILD_LOG, maxLines=9999, escapeHtml=false}"
                 }
             }
         }
@@ -44,14 +42,12 @@ pipeline{
                 success{
                   mail to: "tobiasjduffy@gmail.com",
                   subject: "Security Scan Status Email",
-                  body: "Scan was successful!",
-                  attachLog: true
+                  body: "Scan was successful! ${BUILD_LOG, maxLines=9999, escapeHtml=false}"
             }
                 failure{
                   mail to: "tobiasjduffy@gmail.com",
                   subject: "Security Scan Status Email",
-                  body: "Scan failed.",
-                  attachLog: true
+                  body: "Scan failed. ${BUILD_LOG, maxLines=9999, escapeHtml=false}"
                 }
             }
         }
